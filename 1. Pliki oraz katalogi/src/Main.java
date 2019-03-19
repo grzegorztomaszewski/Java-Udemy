@@ -8,11 +8,15 @@ public class Main {
     {
         try
         {
+            File katalog = new File("cos");
+
+            katalog.mkdir(); //tworzenie katalogu
+
             File plik = new File("test.txt");
 
             if (!plik.exists())
             {
-                plik.createNewFile();
+                plik.createNewFile(); //tworzenie pliku
             }
 
             System.out.println("Czy mogę pisać? :"+plik.canWrite());
